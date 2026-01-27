@@ -1,86 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 
 <head>
+    <!-- Setarea setului de caractere pentru afișarea corectă a textului -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
 
-    <!-- Make the page refresh at 5 second -->
-    <!-- <meta http-equiv="refresh" content="5"> -->
+    <!-- Descrierea paginii -->
+    <meta name="description" content="Pagina web despre cele 7 minuni ale lumii, cu imagini, definiții și explicații">
 
-    <meta name="keywords" content="HTML, CSS, JavaScript, CEITI">
-    <meta name="author" content="John Doe">
 
-    <title>Document</title>
+    <!-- Autorul paginii -->
+    <meta name="author" content="Marius Carchilan">
 
+    <!-- Keywords pentru SEO -->
+    <meta name="keywords" content="Istorie, Explorare, Aventura">
+
+
+    <!-- Titlul care apare în fila browserului -->
+    <title>Cele 7 minuni ale lumii</title>
 
 </head>
 
 <body>
 
-    <b>Bold</b>
-    <br>
-    <strong>Strong</strong>
-    <br>
-    <i>Italic</i>
-    <br>
-    <em>Italic</em>
-    <br>
-    <ins>Inserted</ins>
-    <br>
-    <mark style="background-color: aqua;" >Mark</mark>
-    <br>
-    <u>Underlined</u>
-    <br>
-    <s>Strikethrough</s>
-    <br>
-    <del>Deleted</del>
-    <br>
-    <small>Small</small>
-    <br>
-    X <sup>2</sup> + 5 = 10
-    <br>
-    <b>H<sub>2</sub>O</b> este formula apei
-    <br>
+    <div style="margin-left: 10%; margin-right: 10%; margin-bottom: 10%;">
+
+        <!-- Titlul principal al paginii -->
+        <h1 style="text-align: center;">Cele 7 minuni ale lumii</h1>
+
+        <!-- Paragraf introductiv cu formatare variată -->
+        <p>
+            <strong>Cele 7 minuni ale lumii</strong> reprezintă unele dintre cele mai
+            <em>impresionante realizări ale omenirii</em>, fiind considerate
+            <mark>simboluri ale creativității și ingineriei antice</mark>.
+            <br><br>
+            Aceste monumente au avut o <b>importanță istorică</b> și
+            <i>culturală majoră</i>, influențând civilizațiile timp de secole.
+            <small>(Unele dintre ele nu mai există astăzi.)</small>
+            <br><br>
+            Unele construcții au fost <del>distruse</del> altele <ins>păstrate doar în scrieri</ins>.
+        </p>
+
+        <!-- Linie de separare -->
+        <hr>
 
 
-    <p>
-        Buna ziua,     lume!
-    </p>
-
-    <pre>Buna ziua,    lume!
-    </pre>
-    
-    <hr>
-    
-    <h1>Liste</h1>
-
-    <ul>
-        <li style="list-style-type: square;">Ceai</li>
-        <li style="list-style-type: circle;">Paine</li>
-        <li style="list-style-type: none;">Biscuiti</li>
-    </ul>
-
-
-    <!-- 1 / A / I -->
-    <ol type="A" start="10"> 
-        <li>Arbuz Dumitru</li>
-        <li>Balan Sebastian</li>
+        <!-- Listă neordonată -->
+        <h2>Lista celor 7 minuni</h2>
         <ul>
-            <li>Matematica: 10.00</li>
-            <li>Romana 9.80</li>
+            <li>Marea Piramidă din Giza</li>
+            <li>Grădinile Suspendate din Babilon</li>
+            <li>Statuia lui Zeus din Olympia</li>
+            <li>Templul zeiței Artemis</li>
+            <li>Mausoleul din Halicarnas</li>
+            <li>Colosul din Rodos</li>
+            <li>Farul din Alexandria</li>
         </ul>
-        <li>Banari David</li>
-    </ol>
 
-    <dl>
-        <dt>CEITI</dt>
-        <dd>Centrul de Excelent in informatica si tehnologii informationale</dd>
+        <!-- Listă de definiții -->
+        <h2>Definiții</h2>
+        <dl>
+            <dt>Marea Piramidă</dt>
+            <dd>Monument funerar egiptean construit pentru faraonul <a
+                    href="https://historia.nationalgeographic.com.es/a/keops-la-leyenda-negra-del-constructor-de-la-gran-piramide_18856"
+                    target="_blank"><b>Keops</b></a>.
+            </dd>
 
-        <dt>Masa</dt>
-        <dd>Ponderea in kilograme</dd>
-    </dl>
+            <dt>Colosul din Rodos</dt>
+            <dd>Statuie uriașă dedicată zeului <a href="https://www.greekmythology.com/Other_Gods/Helios/helios.html"
+                    target="_blank"><b>Helios</b></a>.
+            </dd>
 
+        </dl>
+
+        <hr>
+
+        <!-- Marea Piramidă -->
+        <h2>Marea Piramidă din Giza</h2>
+
+        <div class="row">
+            <div class="column">
+                <p>
+                    Este singura minune care există și astăzi.
+                    <br>
+                    A fost construită în Egiptul Antic.
+                </p>
+                <img src="https://www.omofon.com/wp-content/uploads/2023/03/piramida-lui-keops.jpg"
+                    alt="Marea Piramidă din Giza" width="400">
+                <p><small>Imagine: Marea Piramidă din Giza</small></p>
+            </div>
+            <div class="column">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4369.593666920273!2d31.129920576258094!3d29.97730082174752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584f7de239bbcd%3A0xca7474355a6e368b!2sNecropola%20Giza!5e1!3m2!1sro!2s!4v1769150222715!5m2!1sro!2s"
+                    width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+
+
+        <hr>
+
+        <!-- Grădinile Suspendate -->
+        <h2>Grădinile Suspendate din Babilon</h2>
+        <p>
+            O minune legendară despre care nu există dovezi clare.
+        </p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Hanging_Gardens_of_Babylon.jpg"
+            alt="Grădinile Suspendate din Babilon" width="400" height="300">
+        <p><small>Reprezentare artistică</small></p>
+        <button>
+            <a href="https://www.worldatlas.com/geography/where-was-babylon-and-what-happened-to-it.html"
+                target="_blank">Apasă aici ca să vezi mai multe</a>
+        </button>
+
+
+
+        <hr>
+
+        <!-- Statuia lui Zeus -->
+        <h2>Statuia lui Zeus din Olympia</h2>
+        <p>
+            O statuie uriașă este sculptată după tehnica criselefantină, în fildeş ornat cu aur, cu o structură internă
+            din
+            lemn.
+        </p>
+        <img src="https://www.worldhistory.org/img/r/p/500x600/5417.jpg.webp?v=1747332316-1689230728"
+            alt="Statuia lui Zeus din Olympia" width="300">
+
+        <hr>
+
+        <!-- Templul Artemis -->
+        <h2>Templul zeiței Artemis</h2>
+        <p>
+            Templul Artemisei din Efes, cunoscut și ca <i>„Templul Dianei”</i>, a fost un
+            edificiu antic grec construit pentru zeița Artemis.
+        </p>
+        <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fminunilelumiiantice.weebly.com%2Fuploads%2F1%2F7%2F0%2F4%2F17040896%2F3243916_orig.jpg&f=1&nofb=1&ipt=233c604383a54a7554e714a9b28cbf5c6aad5427e3c9903b64382bbd26f2669d"
+            alt="Templul zeiței Artemis" width="300">
+
+        <hr>
+
+        <!-- Mausoleul -->
+        <h2>Mausoleul din Halicarnas</h2>
+        <p>
+            Mausoleul poartă numele guvernatorului local <i>Mausol</i>, care a fost guvernatorul provinciei pentru care
+            fusese destinat, ca mormânt-templu.
+        </p>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F_e4KtmNjxNuA%2FTN1LAHLduWI%2FAAAAAAAAAwo%2FPBDBo5_B8a8%2Fs1600%2Fhalicarnas2.jpg&f=1&nofb=1&ipt=1b6741042db48a4c7c75289ca6ef9c3f44db6014be7eb9cd2d5ac7673632a5c0"
+            alt="Mausoleul din Halicarnas" width="300">
+        <p><small>Ilustrație istorică</small></p>
+
+        <hr>
+
+        <!-- Colosul -->
+        <h2>Colosul din Rodos</h2>
+        <p>
+            O statuie uriașă din bronz, distrusă de un cutremur.
+        </p>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.monden.ro%2Fwp-content%2Fuploads%2F2020%2F10%2FColosul-din-Rhodos.jpg&f=1&nofb=1&ipt=44abe835a7315fa63b15a35ecb9228b2eb70ebedc4d2d54d5d66490dfd9c8c61"
+            alt="Colosul din Rodos" width="300">
+        <p><small>Viziune artistică</small></p>
+
+        <hr>
+
+        <!-- Farul -->
+        <h2>Farul din Alexandria</h2>
+        <p>
+            Țărmul Alexandriei era prea periculos pentru navele care treceau pe acolo, așa s-a născut ideea de a
+            construi
+            ceva care să indice drumul corect către port.
+        </p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Lighthouse_-_Thiersch.png/1280px-Lighthouse_-_Thiersch.png"
+            alt="Farul din Alexandria" width="300">
+        <p><small>Reconstituire istorică</small></p>
+
+        <hr>
+
+        <!-- Secțiune link-uri -->
+        <h2>Surse informative</h2>
+        <p>
+            <a href="https://ro.wikipedia.org/wiki/Cele_șapte_minuni_ale_lumii_antice" target="_blank">
+                Wikipedia - Cele 7 minuni
+            </a>
+            <br>
+            <a href="https://www.britannica.com/topic/Seven-Wonders-of-the-World" target="_blank">
+                Encyclopaedia Britannica
+            </a>
+            <br>
+            <a href="https://www.libertatea.ro/lifestyle/cele-7-minuni-ale-lumii-2775054" target="_blank">
+                Curiozități
+            </a>
+        </p>
+
+        <!-- Concluzie -->
+        <h2>Concluzie</h2>
+        <p>
+            <strong>Cele 7 minuni ale lumii</strong> rămân un
+            <em>simbol al măreției civilizațiilor antice</em>,
+            demonstrând ingeniozitatea și dorința omului de a crea
+            <mark>lucruri extraordinare</mark>.
+        </p>
+    </div>
 
 </body>
 

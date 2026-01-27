@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Multimedia Modernă</title>
+
+
+
+    <!-- Descrierea paginii -->
+    <meta name="description" content="Pagina web multimedia">
+
+
+    <!-- Autorul paginii -->
+    <meta name="author" content="Marius Carchilan">
+
+    <!-- Keywords pentru SEO -->
+    <meta name="keywords" content="Video, Audio, Images, HTML">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #0f172a, #020617);
+            color: #e5e7eb;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 70px 20px;
+            background: radial-gradient(circle, #1e293b, #020617);
+        }
+
+        header h1 {
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            opacity: 0.8;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        /* CARD */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+            color: #60a5fa;
+        }
+
+        .images img {
+            width: 100%;
+            max-width: 340px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        /* MEDIA */
+        audio,
+        video,
+        iframe {
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 12px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9rem;
+            background: #020617;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Pagina mea multimedia</h1>
+        <p>Design modern pentru imagini, audio și video</p>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Imagini</h2>
+            <p>Câteva imagini care reflectă interesele mele.</p>
+
+            <div class="images">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstiripesurse.md%2Fwp-content%2Fuploads%2FFotbal.jpg&f=1&nofb=1"
+                    alt="">
+                <img src="./public/it.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Fișier audio</h2>
+            <p>O muzica liniștită.</p>
+
+            <audio controls>
+                <source src="./public/calm-music.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="card">
+            <h2>Video local</h2>
+            <p>Câteva imagini care reflectă interesele mele.</p>
+            <video controls>
+                <source src="./public/gemini.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="card">
+            <h2>Video YouTube</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qz0aGYrrlhU?si=XycSg4vj_yCznplx"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="card">
+            <h2>Colegiul meu</h2>
+            <p>Am studiat la <b>Centrul de Excelență în Informatică și Tehnologii Informaționale</b> din Chișinău.</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.238979070903!2d28.867772876833286!3d46.98518723068159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c9794f8e48f42f%3A0x2cf814bcaef210a1!2sCentrul%20de%20Excelen%C8%9B%C4%83%20%C3%AEn%20Informatic%C4%83%20%C8%99i%20Tehnologii%20Informa%C8%9Bionale!5e1!3m2!1sro!2s!4v1769495678067!5m2!1sro!2s"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 — Pagina multimedia modernă
+    </footer>
+
+</body>
+
+</html>
