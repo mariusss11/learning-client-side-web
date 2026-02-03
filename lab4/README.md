@@ -1,65 +1,72 @@
-IT Products Showcase Website
-📌 Project Description
+# IT Products Showcase Website
 
-This project is a static HTML website that displays IT products using structured tables and simple CSS styling. It is designed to showcase products, sales statistics, a product gallery, and business working hours in a clear and user-friendly layout.
+## 📌 Project Description
+This project is a **static HTML website** that displays IT products using structured tables and simple CSS styling. It is designed to showcase products, sales statistics, a product gallery, and business working hours in a clear and user-friendly layout.
 
-The website focuses on Apple products such as laptops, phones, and accessories, using images, prices, quantities, and country of origin.
+The website focuses on **Apple products** such as laptops, phones, and accessories, using images, prices, quantities, and country of origin.
 
-🛠️ Technologies Used
+---
 
-HTML5 – page structure and content
+## 🛠️ Technologies Used
+- **HTML5** – page structure and content  
+- **CSS3** – styling and layout  
+- **Google Fonts (Montserrat)** – typography  
+- **External images** – product visuals  
 
-CSS3 – styling and layout
+---
 
-Google Fonts (Montserrat) – typography
+## 📂 Project Features
 
-External images – product visuals
+### 🖥️ IT Products Table
+- Product image  
+- Product name  
+- Price (MDL)  
+- Quantity available  
+- Country of origin  
 
-📂 Project Features
-🖥️ IT Products Table
+### 📊 Monthly Sales Statistics
+- Displays sales data for:
+  - Laptops
+  - Phones
+  - Accessories  
+- Organized by month:
+  - September
+  - October
+  - November  
 
-Product image
+### 🖼️ Product Gallery
+- Visual gallery with:
+  - Product image
+  - Name
+  - Price  
 
-Product name
+### ⏰ Working Schedule
+- Business working hours for:
+  - Weekdays
+  - Weekends  
 
-Price (MDL)
+---
 
-Quantity available
+## 🎨 Styling Highlights
+- Rounded tables and cells  
+- Centered content  
+- Aqua and aquamarine color theme  
+- Responsive-friendly layout  
+- Clean and readable font  
 
-Country of origin
+---
 
-📊 Monthly Sales Statistics
+## 🚀 How to Run the Project
+1. Download or clone the project files  
+2. Open the `.html` file in any modern web browser  
+3. No additional setup required  
 
-Displays sales data for:
+---
 
-Laptops
+## 📌 Notes
+- This is a **front-end only** project (no JavaScript or backend)
+- Intended for learning and presentation purposes
+- Images are loaded from external URLs
 
-Phones
+---
 
-Accessories
-
-Organized by month:
-
-September
-
-October
-
-November
-
-🖼️ Product Gallery
-
-Visual gallery with:
-
-Product image
-
-Name
-
-Price
-
-⏰ Working Schedule
-
-Business working hours for:
-
-Weekdays
-
-Weekends
