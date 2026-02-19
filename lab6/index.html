@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ro">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tabele HTML & CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f6f6;
+            padding: 24px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 26px 0 12px;
+        }
+
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 34px;
+            align-items: center;
+        }
+
+        .card {
+            background: #fff;
+            padding: 18px 18px 22px;
+            border-radius: 14px;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, .08);
+        }
+
+        /* stil general pentru tabele */
+        table {
+            border-collapse: collapse;
+        }
+
+
+        td {
+            border: 2px solid #000;
+            padding: 0;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: 700;
+            color: rgba(0, 0, 0, .55);
+        }
+
+        /* dimensiuni ușor de modificat */
+        :root {
+            --u: 42px;
+            /* unitate de bază */
+            --b: 2px;
+            /* grosime border */
+        }
+
+        /* paletă */
+        .red {
+            background: #ff0000;
+        }
+
+        .ylw {
+            background: #ffe100;
+        }
+
+        .grn {
+            background: #0a7a0a;
+            color: rgba(255, 255, 255, .75);
+        }
+
+        .cyn {
+            background: #00c8ff;
+        }
+
+        .blu {
+            background: #0a66ff;
+            color: rgba(255, 255, 255, .75);
+        }
+
+        .prp {
+            background: #7a1a7a;
+            color: rgba(255, 255, 255, .75);
+        }
+
+        .lime {
+            background: #9cc15a;
+        }
+
+        .brick {
+            background: #b44b4b;
+            color: rgba(255, 255, 255, .75);
+        }
+
+        .sky {
+            background: #4e7dbb;
+            color: rgba(255, 255, 255, .8);
+        }
+
+        .mag {
+            background: #e24ad3;
+        }
+
+        .pink {
+            background: #e34c7d;
+        }
+
+        .org {
+            background: #f08a00;
+        }
+
+        .orangeRed {
+            background: #ff2a00;
+        }
+
+        .aqua {
+            background: #66e6ee;
+        }
+
+        .mint {
+            background: #35d0a6;
+        }
+
+        .g1 {
+            background: #43e36b;
+        }
+
+        .g2 {
+            background: #38d800;
+        }
+
+        .gold {
+            background: #ffd000;
+        }
+
+        .gold2 {
+            background: #ffbf00;
+        }
+
+        /* =========================================================
+       TABELUL 1 (recreare “tip puzzle” cu rowspan/colspan)
+       NOTĂ: e cea mai complexă din PDF; am făcut o versiune foarte apropiată.
+       Dacă profesorul cere “perfect pixel”, ajustezi ușor colspans / heights.
+    ========================================================== */
+        .t1 td {
+            width: var(--u);
+            height: calc(var(--u) * 0.9);
+            font-size: 14px;
+        }
+
+        .t1 .h2 {
+            height: calc(var(--u) * 1.8);
+        }
+
+        .t1 .h3 {
+            height: calc(var(--u) * 2.7);
+        }
+
+        .t1 .h4 {
+            height: calc(var(--u) * 3.6);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!-- ===================== TABELUL 1 ===================== -->
+        <div class="card">
+            <h2>Tabelul nr. 1</h2>
+            <table class="t1">
+                <tr>
+                    <td class="red h2" colspan="2" rowspan="3">1</td>
+                    <td class="red" rowspan="2" colspan="2"></td>
+                    <td class="red" colspan="4"></td>
+                    <td class="red" rowspan="3" colspan="2"></td>
+                    <td class="red" colspan="2"></td>
+                    <td class="red" colspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="org" colspan="2">2</td>
+                    <td class="org" colspan="2">2</td>
+                    <td class="org" colspan="2">2</td>
+                    <td class="org" colspan="2">2</td>
+                </tr>
+                <tr>
+                    <td class="ylw" colspan="4">3</td>
+                    <td class="ylw" colspan="2"></td>
+                    <td class="ylw" colspan="2"></td>
+                    <td class="ylw" colspan="2" rowspan="3"></td>
+                </tr>
+
+                <tr>
+                    <td class="grn" colspan="2">4</td>
+                    <td class="grn" colspan="4">4</td>
+                    <td class="grn" colspan="6">4</td>
+                </tr>
+
+                <tr>
+                    <td class="cyn" colspan="2">5</td>
+                    <td class="cyn" colspan="4">5</td>
+                    <td class="cyn" colspan="2" rowspan="2">5</td>
+                    <td class="cyn" colspan="4">5</td>
+                </tr>
+                <tr>
+                    <td class="blu" colspan="2">6</td>
+                    <td class="blu" colspan="4"></td>
+                    <td class="blu" colspan="6"></td>
+                </tr>
+                <tr>
+                    <td class="prp" colspan="2" rowspan="4">7</td>
+                    <td class="prp" colspan="4" rowspan="2"></td>
+                    <td class="prp" colspan="2"></td>
+                    <td class="prp" colspan="6"></td>
+                </tr>
+                <tr>
+                    <td class="red" colspan="2" rowspan="3">8</td>
+                    <td class="red" colspan="6" rowspan="3"></td>
+                </tr>
+                <tr>
+                    <td class="org" colspan="2">9</td>
+                    <td class="org" colspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="ylw" colspan="2">10</td>
+                    <td class="ylw" colspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="grn" colspan="2">11</td>
+                    <td class="grn" colspan="8"></td>
+                    <td class="grn" colspan="2"></td>
+                    <td class="grn" colspan="2" rowspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="cyn" colspan="6">12</td>
+                    <td class="cyn" colspan="2"></td>
+                    <td class="cyn" colspan="2" rowspan="2"></td>
+                    <td class="cyn" colspan="2" rowspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="blu" colspan="6" rowspan="5">13</td>
+                    <td class="blu" colspan="2"></td>
+                    <td class="blu" colspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="prp" colspan="2">14</td>
+                    <td class="prp" colspan="2"></td>
+                    <td class="prp" colspan="2"></td>
+                    <td class="prp" colspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="red" colspan="2">15</td>
+                    <td class="red" colspan="2"></td>
+                    <td class="red" colspan="4" rowspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="org" colspan="2" rowspan="3">16</td>
+                    <td class="org" colspan="2" rowspan="3"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td class="org" colspan="4"></td>
+                </tr>
+                <tr>
+                    <td class="ylw" colspan="2">17</td>
+                    <td class="ylw" colspan="4"></td>
+                    <td class="ylw" colspan="4"></td>
+                </tr>
+
+                <tr>
+                    <td class="grn" colspan="2">18</td>
+                    <td class="grn" colspan="12"></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <!-- ===================== TABELUL 2 ===================== -->
+        <div class="card">
+            <h2>Tabelul nr. 2</h2>
+            <table class="t1">
+                <tr>
+                    <td class="red h2" colspan="2" rowspan="11">1</td>
+                    <td rowspan="3" colspan="2">2</td>
+                    <td class="grn" rowspan="3" colspan="3"></td>
+                    <td rowspan="3" colspan="2">2</td>
+                    <td class="red h2" colspan="2" rowspan="11">1</td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="blu" rowspan="3" colspan="7">2</td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td class="prp"></td>
+                    <td></td>
+                    <td class="prp"></td>
+                    <td></td>
+                    <td class="prp"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="grn" rowspan="2" colspan="7">2</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="prp" rowspan="2" colspan="7">2</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </table>
+        </div>
+
+        <!-- ===================== TABELUL 3 ===================== -->
+        <div class="card">
+            <h2>Tabelul nr. 3</h2>
+
+            <!-- structură pe 3 coloane; unele celule conțin mini-tabele -->
+            <table class="t3 t3box">
+                <tr>
+                    <td class="lime"></td>
+                    <td class="brick big" colspan="2" rowspan="2"></td>
+                    <td class="lime"></td>
+                </tr>
+                <tr>
+                    <td class="lime"></td>
+                    <td class="lime"></td>
+                </tr>
+
+                <tr>
+                    <td class="brick big2" colspan="2" rowspan="2"></td>
+                    <td class="lime" colspan="1"></td>
+                    <td rowspan="2" style="background:#fff;">
+                        <table class="mini2x2">
+                            <tr>
+                                <td class="sky"></td>
+                                <td class="sky"></td>
+                            </tr>
+                            <tr>
+                                <td class="sky"></td>
+                                <td class="sky"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="lime"></td>
+                </tr>
+
+                <tr>
+                    <td class="brick" colspan="2"></td>
+                    <td class="lime" colspan="1"></td>
+                    <td class="lime"></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</body>
+
+</html>
