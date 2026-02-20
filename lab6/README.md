@@ -1,129 +1,158 @@
-# 📝 HTML Forms Collection Project
+# HTML & CSS Tables Project
 
-## 📖 Description
+## 📌 Project Overview
 
-This project contains multiple example HTML forms created using **HTML5**.  
-The goal of the project is to demonstrate how different types of input fields and form elements work in web development.
+This project demonstrates advanced usage of **HTML tables** combined
+with **CSS styling** to recreate complex visual layouts using:
 
-The page includes three separate forms:
+-   `rowspan`
+-   `colspan`
+-   Custom color styling
+-   CSS variables
+-   Flexbox layout for positioning multiple tables
 
-1. Application Form  
-2. Main Form  
-3. Student Registration Form  
+The goal of the project was to reproduce structured graphical layouts
+(similar to puzzle blocks) using only HTML tables and CSS.
 
----
+------------------------------------------------------------------------
 
-## 🎯 Project Objectives
+## 🧱 Structure of the Project
 
-- Practice creating HTML forms
-- Learn different input types
-- Understand form structure using tables
-- Demonstrate validation-ready fields
-- Practice user data collection interfaces
+The document follows a correct HTML structure:
 
----
+-   `<!DOCTYPE html>` declaration
+-   `<html>` root element
+-   `<head>` section containing:
+    -   Meta tags
+    -   Title
+    -   Internal CSS styling
+-   `<body>` section containing:
+    -   A wrapper container
+    -   Three separate styled tables
 
-## 🧩 Implemented Features
+------------------------------------------------------------------------
 
-### 📄 Application Form
+## 🎨 Styling Approach
 
-This form collects job application information including:
+### 1️⃣ Global Styling
 
-- First Name
-- Last Name
-- Date of Birth
-- Age
-- Email Address
-- Available Position (Radio buttons)
-- Programming Languages (Checkboxes)
-- Password and Confirmation
+Basic page styling was applied: - Background color - Font family -
+Padding - Center alignment for titles
 
----
+### 2️⃣ Layout Container
 
-### 📋 Main Form
+A `.wrap` class was used with:
 
-This form collects general information such as:
+``` css
+display: flex;
+flex-direction: column;
+gap: 34px;
+align-items: center;
+```
 
-- Full Name
-- Email Address
-- Title Input
-- Multiple Dropdown Selections
-- Comment Section (Textarea)
+This ensures: - Tables are stacked vertically - Equal spacing between
+them - Centered alignment
 
----
+### 3️⃣ Card Design
 
-### 🎓 Student Registration Form
+Each table is wrapped inside a `.card` container with: - White
+background - Padding - Rounded corners - Shadow effect
 
-This form simulates a student enrollment system including:
+This creates a clean and modern appearance.
 
-- Roll Number
-- Student Name
-- Father's Name
-- Date of Birth
-- Mobile Number
-- Email
-- Password
-- Gender Selection
-- Department Selection
-- Course Dropdown
-- File Upload (Student Photo)
-- City and Address
+------------------------------------------------------------------------
 
----
+## 📊 Table Construction Logic
 
-## 🛠️ Technologies Used
+### Core Rules Used
 
-- HTML5
-- Google Fonts (Montserrat)
+1.  Every table row must have a consistent total number of columns.
+2.  `colspan` merges columns horizontally.
+3.  `rowspan` merges rows vertically.
+4.  When using `rowspan`, future rows must account for already occupied
+    columns.
 
----
+------------------------------------------------------------------------
 
-## 📚 HTML Elements Demonstrated
+## 🔢 Tabelul 1
 
-### Input Types
+This table demonstrates: - Complex grid structuring - Multiple rowspan
+and colspan combinations - Color-based segmentation
 
-- `text`
-- `email`
-- `number`
-- `date`
-- `password`
-- `radio`
-- `checkbox`
-- `file`
+It recreates a puzzle-style layout using mathematical column
+consistency.
 
----
+------------------------------------------------------------------------
 
-### Other Form Elements
+## 🔢 Tabelul 2
 
-- `<form>` – form container  
-- `<label>` – field description  
-- `<textarea>` – multi-line text input  
-- `<select>` – dropdown menu  
-- `<option>` – dropdown values  
-- `<button>` – submit/reset actions  
-- `<table>` – layout structuring  
+This table focuses on: - Vertical symmetry - Centralized large blocks -
+Controlled rowspan stacking
 
----
+The structure ensures column balance even when large sections span
+multiple rows.
 
-## 🎨 Design Details
+------------------------------------------------------------------------
 
-- Uses Google Font **Montserrat**
-- Table-based layout for organizing form fields
-- Structured labeling for better readability
+## 🔢 Tabelul 3
 
----
+This table recreates a block-style layout consisting of:
 
-## 🎓 Educational Purpose
+-   Large central red area
+-   Green side blocks
+-   Bottom large red block
+-   Two stacked green blocks in the center
+-   Four small blue squares arranged in a 2x2 grid
+-   Bottom-right green block
 
-This project helps learners understand:
+It was built by:
 
-- HTML form structure
-- User input handling basics
-- Layout organization
-- Differences between input field types
+1.  Defining a fixed column width (8 columns total)
+2.  Carefully calculating colspan values
+3.  Using rowspan for large vertical blocks
+4.  Ensuring every row maintains the same total column count
 
----
+------------------------------------------------------------------------
 
-## 📜 License
+## 🧮 CSS Variables
 
-This project is created for educational purposes and can be freely used for learning.
+The project uses root variables:
+
+``` css
+:root {
+  --u: 42px;
+  --b: 2px;
+}
+```
+
+These allow easy resizing of table cell dimensions without rewriting
+multiple CSS rules.
+
+------------------------------------------------------------------------
+
+## 🎯 Key Learning Outcomes
+
+Through this project, the following concepts were practiced:
+
+-   Advanced table structuring
+-   Grid logic and layout math
+-   Visual composition using only tables
+-   Flexbox layout alignment
+-   Clean CSS organization
+-   Debugging broken rowspan/colspan layouts
+
+------------------------------------------------------------------------
+
+## 🚀 Conclusion
+
+This project demonstrates that complex visual layouts can be built using
+pure HTML tables when the structure is mathematically consistent.
+
+The most important rule when working with tables:
+
+> The total number of columns per row must always remain consistent
+> after applying colspan and rowspan.
+
+By respecting this rule, stable and predictable layouts can be achieved.
+
+------------------------------------------------------------------------
