@@ -1,3 +1,116 @@
+<<<<<<< HEAD
 body {
     background-image: url("images/image.png");
 }
+=======
+    /* Selector universal (*): setează box-sizing: border-box; și elimină margin/padding implicite. */
+    * {
+        box-sizing: border-box;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    /* Selector de element: stilizează toate h1 și toate h2 (mărime + spațiere). */
+    h1 {
+        font-size: xx-large;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        font-size: x-large;
+    }
+
+    /* Selector de clasă: .container să aibă o lățime maximă și centrare (margin auto). */
+    .container {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    /* Selector de id: #top să aibă fundal diferit și padding. */
+    #top {
+        margin: auto;
+        border-radius: 10px;
+        background-color: aquamarine;
+        padding: 10px;
+    }
+
+    /* Grupare de selectori: stil comun pentru .link și .chip (ex: fără underline, padding) */
+    .link,
+    .chip {
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+
+    .chip:hover {
+        background-color: bisque;
+    }
+
+    /* https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_hover */
+    .btn {
+        background-color: floralwhite;
+        border: none;
+        color: black;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.2s;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .grid>.card {
+        background-color: skyblue;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        width: 300px;
+    }
+
+    /* Selector de excludere simplu (bonus): stilizează .card care NU este .sold (ex:umbră), folosind :not(.sold) */
+    .card:not(.sold) {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Combinare de clase: .card.featured să arate „special” (border sau fundal). */
+    .card.featured {
+        border: 2px solid orange;
+        background-color: #fff8e6;
+    }
+
+    .card.featured .btn {
+        background-color: orange;
+    }
+
+    .card.featured .btn:hover {
+        background-color: #ffbf5f;
+    }
+
+    /* .btn:hover să se evidențieze. */
+    .btn:hover {
+        color: black;
+        background-color: gainsboro;
+    }
+
+    /* Pseudo-clasă de stare: button:disabled să fie „gri” și cu cursor not-allowed */
+    .btn:disabled {
+        cursor: not-allowed;
+        background-color: gray;
+    }
+
+    /*  */
+    [data-currency="MDL"] {
+        font-weight: bold;
+    }
+
+    /* Stilizează elementele cu data-type="promo" (ex: culoare accent) */
+    [data-type="promo"] {
+        font-weight: bold;
+        color: red;
+    }
+>>>>>>> bd02c7ce16c6eb90dd13290221cec72e54775b1d
