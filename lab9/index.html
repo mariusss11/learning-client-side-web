@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laborator8</title>
+    <style>
+        .div1 {
+            width: 300px;
+            height: 100px;
+            border-width: 1px;
+            border-color: blue;
+            border-style: solid;
+
+        }
+
+        .div2 {
+            width: 300px;
+            height: 100px;
+            padding: 50px;
+            border-color: red;
+            border-style: solid;
+            box-sizing: border-box;
+        }
+
+        .div3 {
+            width: 320px;
+            height: 50px;
+            padding: 10px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: aqua;
+            box-sizing: border-box;
+        }
+
+        .div4 {
+            background-color: red;
+            border-radius: 15px;
+            height: 150px;
+            width: 150px;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .div4:hover {
+            transform: rotate(99deg);
+            background-color: aqua;
+        }
+
+        .input:disabled {
+            background-color: lightgray;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        divul dat este mai mic
+    </div>
+    <div class="div2">
+        divul dat este mai mare
+
+    </div>
+    <div class="div3">
+        Un text ceva
+    </div>
+    <div class="div4">
+        Un text ceva
+    </div>
+    <form>
+        <label>
+            <input type="text" disabled>
+            <button></button>
+        </label>
+    </form>
+</body>
+
+</html>
