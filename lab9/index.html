@@ -4,77 +4,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laborator8</title>
+    <meta name="description"
+        content="Exemplu practic pentru înțelegerea proprietăților padding, margin și border într-o pagină modernă">
+    <meta name="author" content="Marius">
+    <title>Modelul CSS Box</title>
     <style>
-        .div1 {
-            width: 300px;
-            height: 100px;
-            border-width: 1px;
-            border-color: blue;
-            border-style: solid;
-
-        }
-
-        .div2 {
-            width: 300px;
-            height: 100px;
-            padding: 50px;
-            border-color: red;
-            border-style: solid;
+        * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
-        .div3 {
-            width: 320px;
-            height: 50px;
-            padding: 10px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: aqua;
-            box-sizing: border-box;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0ebe3;
         }
 
-        .div4 {
-            background-color: red;
-            border-radius: 15px;
-            height: 150px;
-            width: 150px;
-            margin: auto;
-            transition: 0.5s;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        .div4:hover {
-            transform: rotate(99deg);
-            background-color: aqua;
+        /* HEADER */
+        header {
+            background-color: #e8dcc4;
+            border: 4px solid #8b7355;
+            border-radius: 12px;
+            padding: 40px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin-bottom: 40px;
+            text-align: center;
         }
 
-        .input:disabled {
-            background-color: lightgray;
-            cursor: not-allowed;
+        header h1 {
+            color: #3d3027;
+            margin-bottom: 15px;
+            font-size: 2.5em;
+        }
+
+        header p {
+            color: #5a4a3a;
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            color: #3d3027;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 5px solid #8b7355;
+        }
+
+        /* BLOCURI INFORMATIVE */
+        .info-blocks {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .info-block {
+            flex: 1;
+            background-color: #faf7f2;
+            border: 3px solid #c9b89a;
+            border-radius: 8px;
+            padding: 25px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .info-block h3 {
+            color: #3d3027;
+            margin-bottom: 12px;
+            font-size: 1.4em;
+        }
+
+        .info-block p {
+            color: #5a4a3a;
+            line-height: 1.7;
+        }
+
+        /* CARDURI TEMATICE */
+        .cards {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            flex: 1;
+            background-color: #ffffff;
+            border: 3px solid #d4c4a8;
+            border-radius: 10px;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #d4c4a8;
+        }
+
+        .card-content {
+            padding: 20px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .card h3 {
+            color: #3d3027;
+            margin-bottom: 12px;
+            margin-top: 5px;
+            font-size: 1.3em;
+        }
+
+        .card p {
+            color: #5a4a3a;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .card-button {
+            display: inline-block;
+            background-color: #8b7355;
+            color: #ffffff;
+            padding: 10px 20px;
+            padding-left: 25px;
+            padding-right: 25px;
+            border: 2px solid #6d5a45;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .card-button:hover {
+            background-color: #6d5a45;
+        }
+
+        /* BOX MODEL DEMO */
+        .box-model-demo {
+            background-color: #e8dcc4;
+            border: 4px dashed #8b7355;
+            border-radius: 8px;
+            padding: 40px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .box-model-demo h2 {
+            color: #3d3027;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .box-model-demo p {
+            color: #5a4a3a;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .outer-box {
+            background-color: #d4c4a8;
+            border: 5px solid #8b7355;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        .outer-box p {
+            margin-bottom: 20px;
+        }
+
+        .inner-box {
+            background-color: #faf7f2;
+            border: 4px solid #a89176;
+            padding: 25px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border-radius: 6px;
+        }
+
+        .inner-box p {
+            margin: 0;
+            text-align: left;
+        }
+
+        .box-legend {
+            background-color: #ffffff;
+            border: 2px solid #c9b89a;
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        .box-legend p {
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        .box-legend p:last-child {
+            margin-bottom: 0;
+        }
+
+        .box-legend strong {
+            color: #3d3027;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #e8dcc4;
+            border: 3px solid #8b7355;
+            border-radius: 8px;
+            padding: 30px;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        footer p {
+            color: #3d3027;
+            font-size: 1em;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+
+            .info-blocks,
+            .cards {
+                flex-direction: column;
+            }
+
+            .card {
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="div1">
-        divul dat este mai mic
-    </div>
-    <div class="div2">
-        divul dat este mai mare
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <h1>Modelul CSS Box</h1>
+            <p>Exemplu practic pentru înțelegerea proprietăților padding, margin și border într-o pagină modernă.</p>
+        </header>
 
+        <!-- BLOCURI INFORMATIVE -->
+        <h2 class="section-title">Blocuri informative</h2>
+        <div class="info-blocks">
+            <div class="info-block">
+                <h3>Padding</h3>
+                <p>Padding reprezintă spațiul interior al unui element, dintre conținut și chenar. Cu ajutorul lui,
+                    textul și imaginile nu stau lipite de margini.</p>
+            </div>
+            <div class="info-block">
+                <h3>Border</h3>
+                <p>Border este conturul elementului. Acesta poate avea diferite grosimi, culori și stiluri, fiind util
+                    pentru delimitarea vizuală a blocurilor.</p>
+            </div>
+            <div class="info-block">
+                <h3>Margin</h3>
+                <p>Margin reprezintă spațiul exterior al elementului și controlează distanța dintre acesta și celelalte
+                    elemente din pagină.</p>
+            </div>
+        </div>
+
+        <!-- CARDURI TEMATICE -->
+        <h2 class="section-title">Carduri tematice</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop"
+                    alt="Design ordonat">
+                <div class="card-content">
+                    <h3>Design ordonat</h3>
+                    <p>Un card bine structurat are nevoie de spațiu interior suficient, de un chenar clar și de distanțe
+                        corecte față de celelalte carduri.</p>
+                    <a href="#" class="card-button">Vezi detalii</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop"
+                    alt="Spațiere corectă">
+                <div class="card-content">
+                    <h3>Spațiere corectă</h3>
+                    <p>Margin și padding lucrează împreună pentru a crea o interfață aerisită, echilibrată și ușor de
+                        citit.</p>
+                    <a href="#" class="card-button">Citește mai mult</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
+                    alt="Elemente delimitate">
+                <div class="card-content">
+                    <h3>Elemente delimitate</h3>
+                    <p>Border-ul ajută la separarea conținutului și oferă structurii pagini claritate și ordine.</p>
+                    <a href="#" class="card-button">Explorează</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- DEMONSTRAȚIE BOX MODEL -->
+        <div class="box-model-demo">
+            <h2>Demonstrație Box Model</h2>
+            <p>Blocul de mai jos este creat special pentru a observa cum funcționează modelul CSS Box.</p>
+
+            <div class="outer-box">
+                <p><strong>Acesta este blocul exterior.</strong></p>
+                <div class="inner-box">
+                    <p>Acesta este blocul interior. Observă că el are propriile sale margin, padding și border.</p>
+                </div>
+            </div>
+
+            <div class="box-legend">
+                <p><strong>Content</strong> – textul din interiorul elementului</p>
+                <p><strong>Padding</strong> – spațiul dintre text și border</p>
+                <p><strong>Border</strong> – conturul elementului</p>
+                <p><strong>Margin</strong> – spațiul dintre element și celelalte blocuri</p>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>Lucrare practică CSS: Modelul Box • Padding • Margin • Border</p>
+        </footer>
     </div>
-    <div class="div3">
-        Un text ceva
-    </div>
-    <div class="div4">
-        Un text ceva
-    </div>
-    <form>
-        <label>
-            <input type="text" disabled>
-            <button></button>
-        </label>
-    </form>
 </body>
 
 </html>
