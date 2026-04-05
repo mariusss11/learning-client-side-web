@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Put The World On Mute</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .page {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Full-bleed background image */
+        .bg {
+            position: absolute;
+            inset: 0;
+            background-image: url("images/hero.png");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        /* Nav top-right */
+        nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            padding: 28px 52px;
+            z-index: 10;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #111;
+            font-family: 'Roboto';
+            font-weight: 400;
+            margin-right: 50px;
+            font-size: 20px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            opacity: 0.6;
+        }
+
+        /* Headline bottom-right area */
+        .headline {
+            position: absolute;
+            right: 15%;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: left;
+            z-index: 10;
+        }
+
+        .headline h1 {
+            font-family: 'Roboto';
+            font-weight: 900;
+            font-size: 100px;
+            line-height: 0.93;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            color: #111;
+        }
+
+        /* ── PRODUCTS SECTION ── */
+        .products {
+            width: 100%;
+            padding: 80px 60px;
+            background: #f0efed;
+        }
+
+        .products h1 {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            font-size: 48px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #111;
+            margin-bottom: 48px;
+        }
+
+        .list {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 240px;
+            background: #fff;
+            border-radius: 4px;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.10);
+        }
+
+        .card-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 36px 24px 32px;
+            gap: 16px;
+        }
+
+        .card-info img {
+            width: 100%;
+            max-width: 220px;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .card-info h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #111;
+            text-align: center;
+        }
+
+        .card-info p {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: #555;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="bg"></div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">New Products</a>
+            <a href="#">Gallery</a>
+        </nav>
+
+        <div class="headline">
+            <h1>PUT THE<br>WORLD ON<br>MUTE</h1>
+        </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="products">
+        <h1>New Products</h1>
+        <div class="list">
+
+            <div class="card">
+                <div class="card-info">
+                    <img src="images/product-1.png" alt="Product One" />
+                    <h2>Beats Solo4</h2>
+                    <p>$225.50</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-info">
+                    <img src="images/product-2.png" alt="Product Two" />
+                    <h2>JBL Tune 520BT</h2>
+                    <p>$225.50</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-info">
+                    <img src="images/product-3.png" alt="Product Three" />
+                    <h2>JLab Studio 2</h2>
+                    <p>$225.50</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
