@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-body {
-    background-image: url("images/image.png");
-}
-=======
     /* Selector universal (*): setează box-sizing: border-box; și elimină margin/padding implicite. */
     * {
         box-sizing: border-box;
@@ -113,4 +108,3 @@ body {
         font-weight: bold;
         color: red;
     }
->>>>>>> bd02c7ce16c6eb90dd13290221cec72e54775b1d

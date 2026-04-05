@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laborator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f9 color(#222);
+            line-height: 1.5;
+        }
+
+        h1 h2 {
+            margin-bottom: 15px;
+        }
+
+        section {
+            background: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .box {
+            padding: 15px;
+            background-color: #dbeafe;
+            border: 2px solid #60a5fa;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .display_demo span {
+            background: #fde98a;
+            border: 1px solid #f59e0b;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .block_demo div {
+            display: block;
+            background: #fecaca;
+            border: 1px solid #ef4444;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        .inline_demo span {
+            display: inline;
+            background: #bbf7d0;
+            border: 1px solid #22c55e;
+            padding: 10px;
+        }
+
+        .inline-block_demo div {
+            display: inline-block;
+            width: 120px;
+            height: 70px;
+            background: #ddd6fe;
+            border: 1px solid #8b5cf6;
+            padding: 10px;
+            margin: 5px;
+            vertical-align: top;
+        }
+
+        .none-demo .height {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <h1>
+            Carchilan Marius
+        </h1>
+        <p>
+            O propozitie care sa contina cel putin 15 cuvinte, insemna ca trebuie sa aiba mai mult decat 14 cuvinte
+        </p>
+
+
+    </section>
+    <section>
+        <h2>
+            Proprietatea display
+        </h2>
+        <div class="box">
+            <strong>
+                <inline>Prin intermediul tagului strong inline doua puncte</inline>
+            </strong>
+            <div class="inline_demo">
+                <span>inline1</span>
+                <span>inline2</span>
+                <span>inline3</span>
+            </div>
+        </div>
+        <div class="box">
+            <strong>
+                <block>Prin intermediul tagului strong inline doua puncte</block>
+            </strong>
+            <div class="block_demo">
+                <div>block1</div>
+                <div>block2</div>
+                <div>block3</div>
+            </div>
+        </div>
+        <div class="box">
+            <strong><inline-block>Prin intermediul <i>tagului</i> strong inline doua puncte</inline></strong>
+            <div class="inline-block_demo">
+                <div>inline1</div>
+                <div>inline2</div>
+                <div>inline3</div>
+            </div>
+        </div>
+        <div class="box nan-demo">
+            <strong display:none>
+                Acest text este vizibil!
+            </strong>
+            <p class="hide">
+                Acest text este invizibil!
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>
