@@ -1,0 +1,260 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "Roboto", sans-serif;
+}
+
+/* ── HEADER ── */
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.page-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #111;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.add-button {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 36px;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+
+.add-button:hover {
+    color: #3d618b;
+    background-color: transparent;
+    border-color: #3d618b;
+}
+
+.back-button {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 36px;
+    text-transform: uppercase;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+
+.back-button:hover {
+    color: white;
+    background-color: #3d618b;
+    border-color: #3d618b;
+}
+
+/* ── PRODUCTS GRID ── */
+.products {
+    width: 100%;
+    padding: 120px 80px;
+}
+
+.all-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+}
+
+@media (min-width: 768px) {
+    .all-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .all-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.product-card {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 40px 30px 24px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.product-image {
+    width: 100%;
+    height: 250px;
+    background: transparent;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.product-image img {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.field-name {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    border: none;
+    border-bottom: 1.5px solid #ccc;
+    background: transparent;
+    outline: none;
+    padding: 4px 0;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+.field-name:focus {
+    border-color: #111;
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.field-price {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #666;
+    border: none;
+    border-bottom: 1.5px solid #ccc;
+    background: transparent;
+    outline: none;
+    padding: 4px 0;
+    width: 80px;
+    transition: border-color 0.2s;
+}
+
+.field-price:focus {
+    border-color: #111;
+}
+
+.field-currency {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #666;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    padding: 3px 6px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* ── COLOR DOTS (same as home page) ── */
+.product-colors {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.color-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.color-dot:hover {
+    transform: scale(1.2);
+}
+
+.red {
+    background-color: #E63946;
+}
+
+.pink {
+    background-color: #FF6B9D;
+}
+
+.green {
+    background-color: #06D6A0;
+}
+
+.cyan {
+    background-color: #00D9FF;
+}
+
+.gray {
+    background-color: #CCCCCC;
+}
+
+/* ── SAVE BUTTON ── */
+.save-button {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 0 0 12px 12px;
+    padding: 14px;
+    width: calc(100% + 64px);
+    margin-left: -32px;
+    margin-top: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-button:hover {
+    background-color: #3d618b;
+}
